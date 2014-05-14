@@ -15,16 +15,18 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 	<?php
+
 		if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])){//se tem algo na sessão e o username está preenchido, então o usuário está logado.
-    	?>
+    	            include("cabecalho.php");
+      ?>
  	
 		 	<div class="container-fluid">
 		 		<section class="col-md-8 col-md-offset-2">
 		 	
 		     			<h1 class="text-center">Área de membros</h1>
 		     			<p class="text-center"> Você está logado como <code><?=$_SESSION['Username']?></code> e seu email é <code><?=$_SESSION['EmailAddress']?></code>.</p>
-		     			<a href="baterpontoentrada.php"><p class="text-center">Marcar entrada</p></a>
 		     			<a href="logout.php"><p class="text-center">Sair</p></a>
 		     		</section>
 		     	</div>
@@ -63,7 +65,7 @@
     			<div class="container">
 			    	<div class="row">
 					<div class="col-md-4 col-md-offset-4">
-			    			<div class="panel panel-default">
+			    			<div class="panel panel-default" id="login">
 						  	<div class="panel-heading">
 						    		<h3 class="panel-title text-center">Sistema de ponto</h3>
 						 	</div>

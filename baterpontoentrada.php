@@ -21,13 +21,14 @@
     			$password = "senha";
     			$email="email";
     			$entrada= "2014-04-04";
-    			$registerquery = mysql_query("INSERT INTO users (Username, Password, EmailAddress, Entrada) 
-	        			VALUES('".$username."', '".$password."', '".$email."' , '".$entrada."')");
+    			$registerquery = mysql_query("INSERT INTO empregado (username, senha, email) 
+	        			VALUES('".$username."', '".$password."', '".$email."' ");
 	        		if($registerquery){
 	        			echo $registerquery;
 	        			echo $_SESSION['Username'];
-	        		}else
-	        		echo "Erro";
+	        		}else{
+	        			echo "Erro";
+	        		}
     	?>
  			
 		 	<script>

@@ -68,9 +68,10 @@
 			    <div class="container">
 					<div class="row">
 						<div class="col-md-4 col-md-offset-4">
-				    			<div class="panel panel-default">
+				    			<div class="panel panel-default"id="login">
 							  	<div class="panel-heading">
-							    		<h3 class="panel-title text-center">Registre-se</h3>
+							    		<h3 class="panel-title text-center">Registre-se.</h3>
+							    		
 							 	</div>
 							  	
 							  	<div class="panel-body">
@@ -89,8 +90,9 @@
 									    			<input class="form-control" id="password" placeholder="Senha" name="password" type="password">
 									    		</div>
 									    		<div class="form-group">
-									    			<input class="form-control" id="email" placeholder="Email" name="email" type="text">
+									    			<input class="form-control" id="email" placeholder="Email" name="email" type="email">
 									    		</div>
+									    		<label>Já é cadastrado? <a href="index.php">Faça login</a></label>
 									    		<input class="btn btn-lg btn-info btn-block" type="submit" value="Cadastrar">
 									    	</fieldset>
 							      	</form>

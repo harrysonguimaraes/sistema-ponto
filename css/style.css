@@ -1,10 +1,153 @@
-body{
-	padding-top: 200px;
+/*----------------------------------------------------------Fontes----------------------------------------------------------*/
+@font-face {
+	font-family: YK-ExtraLight;
+	src: url('../fonts/YanoneKaffeesatz-ExtraLight.ttf');
 }
 
-p{
-	font-size: 200%;
+@font-face {
+	font-family: YK-Bold;
+	src: url('../fonts/YanoneKaffeesatz-Bold.ttf');
 }
+
+@font-face {
+	font-family: YK-Regular;
+	src: url('../fonts/YanoneKaffeesatz-Regular.ttf');
+}
+
+/*-------------------------------------------------------Cabeçalho----------------------------------------------------------------*/
+
+/*----------------------------------------------------------MENU----------------------------------------------------------------*/
+
+#cabecalho .navbar {
+	border: none;
+	font-size: 18px;
+}
+
+.dropdown-menu{
+	padding: 0;
+}
+
+.dropdown-menu a{
+	font-size: 16px;
+}
+
+
+#cabecalho .navbar-default,
+#cabecalho .navbar-default a {
+	background-color: #0095a6; 
+	font-family: YK-ExtraLight;
+	border-radius: 0;/*Necessário pois o menu padrão do Bootstrap aplica um border-radius*/
+	margin-bottom: 0;/*Reset no margin pois no padrão existe uma margin*/
+	color: #fff;
+}
+
+#cabecalho .navbar-default .navbar-nav > li > a {
+	color: #fff;
+}
+
+#cabecalho .borda-direita{
+  	border-right: 1px solid #00727f;/*Borda existente nos itens do menu*/
+}
+
+@media (max-width: 767px) {
+	#cabecalho .navbar-default .navbar-nav > li > a ,
+	.navbar-default .navbar-nav > li > a {
+  		border-right: none;/*Remove a borda direita quando o menu estiver colapsado*/
+  		text-align: center;
+	}
+	.dropdown-menu a{
+	text-align: right;
+}
+}
+
+#cabecalho .navbar-default .navbar-nav > li > a:hover,
+#cabecalho .navbar-default .navbar-nav > li > a:focus,
+#cabecalho .navbar-default ul li a:hover {
+	background-color: #00727f;
+	/*Adiciona uma transição suave ao passar o mouse*/
+	-webkit-transition: 0.7s;
+	-moz-transition: 0.7s;
+	-o-transition: 0.7s;
+	-ms-transition: 0.7s;
+}
+#cabecalho .navbar-default .navbar-toggle .icon-bar {
+	background-color: white;
+}
+#cabecalho .navbar-default .navbar-toggle:hover {
+	background-color: #00727f;
+	
+}
+
+/*-----------------------------------------------------------------Fim do menu----------------------------------------------------------------*/
+/*------------------------------------------------------------Faixa cinza após o menu---------------------------------------------------------*/
+
+.faixa-cinza{
+	background-color: #535353;
+	font-family: YK-Regular;
+	height: 50px;
+	padding-top: 12px;
+	margin-left: -16px;
+	margin-right: -16px;
+}
+/*-------------------------------------------------------Logo da comp e horário de atendimento---------------------------------------------*/
+
+#fundo-branco{
+	background-color: #fff;
+}
+img[src="img/logocomp.png"]{
+	padding: 60px 0;
+}
+
+.fundo-verde{
+	background-color: #00727f;
+	height: 248px;
+	padding-bottom: 40px;
+	margin-top: -30px;
+	margin-bottom: -30px;
+	padding-top: 20px;
+	color: white;
+}
+
+.fundo-verde p.lead{
+	font-size: 26px;
+	font-family: YK-Regular;
+	margin-bottom: -6px;
+
+}
+.fundo-verde p.lead+p{
+	margin-bottom: 80px;
+}
+
+.fundo-verde p.lead+p+p{
+	font-size: 30px;
+}
+
+.fundo-verde .glyphicon{
+	padding-right: 20px;
+	font-size: 30px;
+}
+.glyphicon-thumbs-up{
+	color: #007474;
+	margin-top: 30px;
+	font-size: 120px;
+}
+
+@media (max-width: 767px) {
+	.glyphicon-thumbs-up{
+	color: #007474;
+	margin-top: 0px;
+	font-size: 120px;
+}
+}
+
+#cabecalho{
+	padding-bottom: 80px;
+}
+
+
+/*-------------------------------------------------------Fim do cabeçalho---------------------------------------------*/
+
+
 a:hover{
 	text-decoration: none;
 }
@@ -23,4 +166,11 @@ a>p:hover{
 }
 body{
 	background-color: #ecf0f1;
+	font-family: YK-ExtraLight;
+	padding: 0;
+	margin: 0;
+}
+
+#login{
+	margin-top: 180px;
 }
