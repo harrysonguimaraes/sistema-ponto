@@ -23,10 +23,10 @@
 			if(!empty($_POST['username']) && !empty($_POST['password'])){
 				$nome = mysql_real_escape_string($_POST['nome']);
 				$sobrenome = mysql_real_escape_string($_POST['sobrenome']);
-	    			$username = mysql_real_escape_string($_POST['username']);
+	    		$username = mysql_real_escape_string($_POST['username']);
 	   		 	$password = md5(mysql_real_escape_string($_POST['password']));
 	   		 	$email = mysql_real_escape_string($_POST['email']);
-	   		 	$entrada = date('Y-m-d H:i:s');
+	
 	     
 	     			$checkusername = mysql_query("SELECT * FROM empregado WHERE username = '".$username."'");
 

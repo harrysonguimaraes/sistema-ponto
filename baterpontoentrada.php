@@ -17,27 +17,33 @@
 <body>
 	<?php
 		if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])){//se tem algo na sessão e o username está preenchido, então o usuário está logado.
-    			$username = "Teste";
-    			$password = "senha";
-    			$email="email";
-    			$entrada= "2014-04-04";
-    			$registerquery = mysql_query("INSERT INTO empregado (username, senha, email) 
-	        			VALUES('".$username."', '".$password."', '".$email."' ");
+    			$entrada = date('Y-m-d H:i:s');
+    			$registerquery = mysql_query("insert into horas(id_empregado, entrada)
+					values((select id_empregado from empregado where username=\"".$_SESSION['Username']."\"),\"".$entrada."\")");
 	        		if($registerquery){
-	        			echo $registerquery;
-	        			echo $_SESSION['Username'];
+	 ?>
+	 					<script>
+		 					alert("Marcação realizada com sucesso!");
+		 				</script>
+	 					
+	 
+	 <?php
+	        			
 	        		}else{
-	        			echo "Erro";
+	 ?>
+	 					<script>
+		 					alert("Não foi possível realizar a marcação. Tente novamente em alguns minutos.");
+		 				</script>				
+	 	
+	 <?php
 	        		}
     	?>
  			
-		 	<script>
-		 		alert("Marcação realizada com sucesso!");
-		 	</script>
-		 	<!-- <meta HTTP-EQUIV="Refresh" CONTENT="0; URL=index.php"> -->
-      
+		 	
+		 	<meta HTTP-EQUIV="Refresh" CONTENT="0; URL=index.php">
+     
     	<?php
-		}else{//se o usuário preencheu usuário e senha, redireciona para login
+		}else{//se não tem nada na sessão, usuário precisa logar.
 	?>
 		<script>
 		 	alert("É necessário realizar o login primeiro!");
