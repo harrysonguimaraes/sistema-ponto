@@ -78,19 +78,19 @@
 							    		<form method="post" action="register.php" name="registerform" id="registerform">
 						                    	<fieldset>
 						                    		<div class="form-group">
-									    		    <input class="form-control" id="nome" placeholder="Nome" name="nome" type="text">
+									    		    <input class="form-control" id="nome" placeholder="Nome" name="nome" maxlength="50" type="text">
 									    		</div>
 									    		<div class="form-group">
-									    		    <input class="form-control" id="sobrenome" placeholder="Sobrenome" name="sobrenome" type="text">
+									    		    <input class="form-control" id="sobrenome" placeholder="Sobrenome" name="sobrenome" maxlength="100" type="text">
 									    		</div>
 									    	  	<div class="form-group">
-									    		    <input class="form-control" id="username" placeholder="Usuário" name="username" type="text">
+									    		    <input class="form-control" id="username" placeholder="Usuário" name="username" maxlength="30" type="text">
 									    		</div>
 									    		<div class="form-group">
-									    			<input class="form-control" id="password" placeholder="Senha" name="password" type="password">
+									    			<input class="form-control" id="password" placeholder="Senha" name="password" maxlength="32" type="password">
 									    		</div>
 									    		<div class="form-group">
-									    			<input class="form-control" id="email" placeholder="Email" name="email" type="email">
+									    			<input class="form-control" id="email" placeholder="Email" name="email" maxlength="50" type="email">
 									    		</div>
 									    		<label>Já é cadastrado? <a href="index.php">Faça login</a></label>
 									    		<input class="btn btn-lg btn-info btn-block" type="submit" value="Cadastrar">

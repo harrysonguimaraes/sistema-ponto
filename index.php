@@ -74,10 +74,10 @@
 						    		<form method="post" action="index.php" name="loginform" id="loginform">
 				                    		<fieldset>
 								    	  	<div class="form-group">
-								    		    <input class="form-control" id="username" placeholder="Usuário" name="username" type="text">
+								    		    <input class="form-control" id="username" placeholder="Usuário" name="username" maxlength="30" type="text">
 								    		</div>
 								    		<div class="form-group">
-								    			<input class="form-control" id="password" placeholder="Senha" name="password" type="password" value="">
+								    			<input class="form-control" id="password" placeholder="Senha" name="password" type="password" maxlength="32" value="">
 								    		</div>
 								    	    	<label>Não é usuário ainda? <a href="register.php">Registre-se</a></label>
 								    		<input class="btn btn-lg btn-info btn-block" type="submit" value="Login">
