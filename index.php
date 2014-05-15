@@ -27,7 +27,6 @@
 		 	
 		     			<h1 class="text-center">Área de membros</h1>
 		     			<p class="text-center"> Você está logado como <code><?=$_SESSION['Username']?></code> e seu email é <code><?=$_SESSION['EmailAddress']?></code>.</p>
-		     			<a href="logout.php"><p class="text-center">Sair</p></a>
 		     		</section>
 		     	</div>
       

@@ -1,5 +1,6 @@
 <?php
 session_start();//Inicia uma sessão
+date_default_timezone_set('America/Sao_Paulo');
  
 $dbhost = "localhost"; // this will ususally be 'localhost', but can sometimes differ
 $dbname = "empresa"; // the name of the database that you are going to use for this project
